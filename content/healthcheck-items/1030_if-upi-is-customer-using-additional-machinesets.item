@@ -1,0 +1,25 @@
+---
+version: v0
+metadata:
+  category_key: "infra"
+  item_evaluated: "If UPI is customer using additional MachineSets"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Using additional MachineSets with Red Hat tested infrastructure provider."
+      - "Using additional MachineSets with Red Hat non-tested infrastructure provider that provides a Machine API implementation."
+    changes_recommended:
+      - "No additional MachineSets.  Infrastructure Provider is Red Hat tested."
+      - "No additional MachineSets.  Infrastructure Provider is not Red Hat tested but provides a Machine API implementation."
+    changes_required:
+      - "Additional MachineSets.  Infrastructure Provider is not Red Hat tested.  Provider has no Machine API implementation."
+    not_applicable:
+      - "Plaform is installed using IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

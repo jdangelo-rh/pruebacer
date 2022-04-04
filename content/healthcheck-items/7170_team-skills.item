@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Team Skills Operating Openshift"
+  references:  # List of Reference
+    - title: "List of positions which would support or utilize an Openshift platform and learning resources per position"
+      url: "https://docs.openshift.com/container-platform/4.9/welcome/learn_more_about_openshift.html"
+  check_procedures:
+    - type: survey
+      question: "Inquire customer about team members previous experience with containers, kubernetes, linux, software development, pipelines and scm. Relevant experience would include years on an assignment utilizing these skillsets, certifications pursued to build knowledge, or general feelings about using or supporting an Openshift cluster. "
+  acceptance_criteria:
+    no_change:
+      - id: 'Team has the experience and knowledge to support platform'
+        condition_description: 'Able to gather information regarding the teams experience and feel confident they can effectively support the platform based on the answers given. '
+    changes_recommended:
+      - id: 'Team does not have the skillsets to support or utilize an Openshift cluster'
+        condition_description: "Based on answers from team members, it wass found they have significant knowledge gaps in the core areas necessary for Openshift"
+        impact_risk_text: "Lack of understanding on supporting and utilizing a cluster will lead to poor cluster performance and health. This will also impact the ability for the team to onboard customers and support their workloads."
+        remediation_text: "Recommend client utilizes a Red Hat Learning Subscription to fill gaps. Recommend the team comes up with their own training plan to provide resources to fill knowledge gaps"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

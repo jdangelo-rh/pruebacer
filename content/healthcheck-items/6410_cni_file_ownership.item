@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the Container Network Interface file ownership is set to root:root"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Container Network Interface file has the right ownership"
+    changes_recommended:
+      - "Set the Container Network Interface file ownership to root:root"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

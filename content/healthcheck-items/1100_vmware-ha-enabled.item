@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  category: "vSphere"
+  category_short: "vSphere"
+  item_evaluated: "vSphere HA Enabled"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "vSphere HA is enabled."
+    changes_recommended:
+      - "vSphere HA is not enabled. Customer should consider to enable this to ensure high availability of a node in case of VM or ESXi host failure."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

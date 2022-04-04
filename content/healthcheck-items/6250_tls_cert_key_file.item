@@ -1,0 +1,29 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "The --tls-cert-file and --tls-private-key-file arguments are set as appropriate"
+    changes_recommended:
+      - "The --tls-cert-file and --tls-private-key-file arguments should be set as appropriate"
+    how_to_check: |
+      cert="$(oc get configmap config -n openshift-kube-apiserver -o json | jq -r '.data["config.yaml"]' | jq '.apiServerArguments."kubelet-client-certificate"[]')"
+      key="$(oc get configmap config -n openshift-kube-apiserver -o json | jq -r '.data["config.yaml"]' | jq '.apiServerArguments."kubelet-client-key"[]')"
+
+      if [ $cert = "\"/etc/kubernetes/static-pod-resources/secrets/kubelet-client/tls.crt\"" ] && [ $key = "\"/etc/kubernetes/static-pod-resources/secrets/kubelet-client/tls.key\"" ]
+      then
+        echo "Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate","Pass"
+      else
+        echo "Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

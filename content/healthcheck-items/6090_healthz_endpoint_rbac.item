@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the healthz endpoint is protected by RBAC"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "healthz endpoint is protected by RBAC"
+    changes_recommended:
+      - "healthz endpoint should be protected by RBAC"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

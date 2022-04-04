@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Etcd Network Performance"
+  references:
+    - title: "Recommended etcd practices"
+      url: "https://docs.openshift.com/container-platform/4.8/scalability_and_performance/recommended-host-practices.html#recommended-etcd-practices_"
+  acceptance_criteria:
+    no_change:
+      - "Reported etcd_network_peer_round_trip_time_seconds_bucket metric 2 minutes rate 99th percentile is less than 50ms."
+    changes_required:
+      - "Reported etcd_network_peer_round_trip_time_seconds_bucket metric 2 minutes rate 99th percentile is more than 50ms."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

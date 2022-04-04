@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  category: "vSphere"
+  category_short: "vSphere"
+  item_evaluated: "VMware Networking Type"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    not_applicable:
+      - "Informational purpose."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

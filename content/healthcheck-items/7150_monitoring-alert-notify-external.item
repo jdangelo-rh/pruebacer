@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Ensure OpenShift alerts are forwarded to an external system that is monitored"
+  references:  # List of Reference
+    - title: "Sending notifications to external systems"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html#sending-notifications-to-external-systems_managing-alerts"
+  check_procedures:
+    - type: survey
+      question: "What external systems can be leveraged to receive OpenShift alerts (email/chat/pagerduty)"
+  acceptance_criteria:
+    no_change:
+      - id: 'OpenShift alerts are sent to an external system'
+        condition_description: 'OpenShift alerts are sent to an external system that is monitored by the administrators responsible for maintaining the platform.'
+    changes_recommended:
+      - id: 'OpenShift alerts are not sent to an external system'
+        condition_description: "OpenShift alerts are not sent to an external system that is monitored by the administrators responsible for maintaining the platform."
+        impact_risk_text: "When OpenShift alerts are not sent to the systems that the administrators who manage OpenShift monitor, issues may go unnoticed resulting in outages or degraded performance of the platform"
+        remediation_text: "Configure alert receivers to external systems"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

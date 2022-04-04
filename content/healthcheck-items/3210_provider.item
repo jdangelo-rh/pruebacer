@@ -1,0 +1,17 @@
+---
+version: v0
+metadata:
+  category_key: "storage"
+  item_evaluated: "Provider 2"
+  references:
+    - title: "asdf asdf asdf"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    not_applicable:
+      - "Informational purpose."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

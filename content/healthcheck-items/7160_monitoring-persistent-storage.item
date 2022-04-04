@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Monitoring components need high performance/local persistent storage to maintain consistent state after a pod restart"
+  references:  # List of Reference
+    - title: "Configure metrics collection for applications deployed on OCP using metrics collection for user defined projects"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/configuring-the-monitoring-stack.html#configuring-persistent-storage"
+  check_procedures:
+    - type: survey
+      question: "Do the openshift monitoring and openshift user monitoring components have high performance/local persistent storage configured?"
+  acceptance_criteria:
+    no_change:
+      - id: 'OpenShift monitoring components have high performance/local persistent storage'
+        condition_description: 'Running cluster monitoring with persistent storage means that your metrics are stored to a persistent volume (PV) and can survive a pod being restarted or recreated. This is ideal if you require your metrics or alerting data to be guarded from data loss. For production environments, it is highly recommended to configure persistent storage. Because of the high IO demands, it is advantageous to use local storage.'
+    changes_recommended:
+      - id: 'OpenShift monitoring components do not have high performance/local persistent storage'
+        condition_description: "The OpenShift monitoring components do not have the appropriate storage configured for a production environment and are not protected against data loss"
+        impact_risk_text: "Running cluster monitoring with persistent storage means that your metrics are stored to a persistent volume (PV) and can survive a pod being restarted or recreated. This is ideal if you require your metrics or alerting data to be guarded from data loss. For production environments, it is highly recommended to configure persistent storage. Because of the high IO demands, it is advantageous to use local storage."
+        remediation_text: "Configure persistent storage for the OpenShift monitoring components per the OpenShift documentation"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

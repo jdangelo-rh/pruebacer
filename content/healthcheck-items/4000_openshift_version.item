@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Cluster Version"
+  references:
+    - title: "Red Hat OpenShift Container Platform Life Cycle Policy"
+      url: "https://access.redhat.com/support/policy/updates/openshift"
+  acceptance_criteria:
+    no_change:
+    - "Current cluster version is supported by Red Hat and is the latest."
+    changes_recommended:
+    - "Current cluster version is supported by Red Hat but is not the latest."
+    changes_required:
+    - "Cluster version is no more supported by Red Hat. Upgrade at least to a EUS version to keep Red Hat support."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

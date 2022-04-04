@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Use of appropriate id field in mapping"
+  references:  
+  - title: "asdf asdf asdf"
+    url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+    - "The id attribute of the LDAP-based identityProvider is an immutable LDAP object."
+    changes_required:
+    - "The id attribute of the LDAP-based identityProvider is not an immutable LDAP object."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

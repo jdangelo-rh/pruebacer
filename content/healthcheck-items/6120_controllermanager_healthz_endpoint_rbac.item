@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that controller manager healthz endpoints are protected by RBAC"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Controller manager healthz endpoint is protected by RBAC"
+    changes_recommended:
+      - "Controller manager healthz endpoint should be protected by RBAC"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

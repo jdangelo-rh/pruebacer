@@ -1,0 +1,34 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the protectKernelDefaults option is not set"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "The protectKernelDefaults option is not set"
+    changes_recommended:
+      - "The protectKernelDefaults option should not be set"
+    how_to_check: |
+      outcome=0
+
+      for node in $(oc get nodes -o jsonpath='{.items[*].metadata.name}')
+        do
+          count="$(oc debug node/${node} -- chroot /host grep -c protectKernelDefaults: /etc/kubernetes/kubelet.conf)"
+          outcome="$((outcome + count))"
+      done
+
+      if [ $outcome -eq 0 ]
+      then
+        echo "Ensure that the protectKernelDefaults option is not set","Pass"
+      else
+        echo "Ensure that the protectKernelDefaults option is not set","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

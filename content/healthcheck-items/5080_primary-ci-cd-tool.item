@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Primary CI CD Tool"
+  references:
+    - title: "Understanding OpenShift Pipelines"
+      url: "https://docs.openshift.com/container-platform/4.8/cicd/pipelines/understanding-openshift-pipelines.html"
+  acceptance_criteria:
+    no_change:
+      - "A CI/CD solution is set."
+    changes_recommended:
+      - "No CI/CD solution is set."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

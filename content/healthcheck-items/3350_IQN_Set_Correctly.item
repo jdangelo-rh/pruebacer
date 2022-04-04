@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "storage"
+  item_evaluated: "iSCSI Initiator Name"
+  references:
+    - title: "asdf asdf asdf"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "iSCSI initiator names is unique per node."
+    changes_required:
+      - "Two or more node share the same iSCSI initiator. Customer should check MachineConfig for a unique initiator name."
+    not_applicable:
+      - "iSCSi storage is not used."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

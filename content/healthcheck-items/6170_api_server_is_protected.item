@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Verify that the scheduler API service is protected by authentication and authorization"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "The scheduler API service is protected by authentication and authorization"
+    changes_recommended:
+      - "The scheduler API service should be protected by authentication and authorization"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

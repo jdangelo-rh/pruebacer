@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "storage"
+  item_evaluated: "Multipath Enabled"
+  references:
+    - title: "asdf asdf asdf"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "iSCSi storage has multipath configured."
+    changes_recommended:
+      - "iSCSi storage has multipath not configured. Customer should check with storage vendor and Openshift doc to enable multipath for data access resilience."
+    not_applicable:
+      - "iSCSi storage is not used."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

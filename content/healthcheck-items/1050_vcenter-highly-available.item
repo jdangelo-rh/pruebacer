@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  item_evaluated: "vCenter Highly Available"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "vCenter HA is configured"
+    changes_recommended:
+      - "vCenter HA is not configured. Customer should configure vCenter HA to ensure MachineSets and dynamic storage continuity."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

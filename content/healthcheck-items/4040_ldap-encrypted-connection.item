@@ -1,0 +1,20 @@
+---
+version: v0 
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "LDAP Encrypted Connection"
+  references:  
+    - title: "Configuring an LDAP identity provider"
+      url: "https://docs.openshift.com/container-platform/4.8/authentication/identity_providers/configuring-ldap-identity-provider.html#configuring-ldap-identity-provider"
+  acceptance_criteria:
+    no_change:
+    - "LDAP connection is secure through TLS."
+    changes_recommended:
+    - "LDAP connection is not secure through TLS."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

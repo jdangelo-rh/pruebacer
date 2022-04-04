@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "OpenShift logging Elasticsearch pods are scheduled on appropriate nodes"
+  references:  # List of Reference
+    - title: "Moving OpenShift Logging resources with node selectors"
+      url: "https://docs.openshift.com/container-platform/4.7/logging/config/cluster-logging-moving-nodes.html"
+  check_procedures:
+    - type: survey
+      question: "Are the OpenShift logging Elasticsearch pods scheduled on nodes that should not impact critical functions of the cluster?"
+  acceptance_criteria:
+    no_change:
+      - id: 'Elasticsearch pods are scheduled to nodes with sufficient resources'
+        condition_description: 'Elasticsearch pods are running on nodes that are appropriately sized and not interfering with other OCP components'
+    changes_recommended:
+      - id: 'Elasticsearch pods may impact other workloads due to their location and available resources'
+        condition_description: 'Elasticsearch pods are running on nodes that may not be appropriately sized and may interfere with other OCP components'
+        impact_risk_text: "Logging can consume significant resources from the node it is running on and the underlying storage. It should be scheduled seperately from crtical OCP components such as etcd, api server and controllers. Depending on the level of load it may also need to be scheduled on dedicated nodes."
+        remediation_text: "Move the Elasticsearch components to infrastructure nodes that can handle the logging loads."
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

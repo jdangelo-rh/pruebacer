@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Client certificate authentication should not be used for users"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Client certificate authentication is not be used for users"
+    changes_recommended:
+      - "Client certificate authentication should not be used for users"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

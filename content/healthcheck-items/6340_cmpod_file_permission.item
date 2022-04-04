@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the controller manager pod specification file permissions are set to 644 or more restrictive"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Controller manager pod specification file has the right permissions"
+    changes_recommended:
+      - "Set the Controller manager pod specification file permissions to 644 or more restrictive"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,24 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "OpenShift Logging"
+  references:
+    - title: "Understanding Red Hat OpenShift Logging"
+      url: "https://docs.openshift.com/container-platform/4.8/logging/cluster-logging.html"
+    - title: "Installing OpenShift Logging"
+      url: "https://docs.openshift.com/container-platform/4.8/logging/cluster-logging-deploying.html"
+    - title: "About the Cluster Logging custom resource"
+      url: "https://docs.openshift.com/container-platform/4.8/logging/config/cluster-logging-configuring-cr.html"
+  acceptance_criteria:
+    no_change:
+      - "OpenShift Logging is installed and configured."
+    changes_recommended:
+      - "OpenShift Logging is not installed."
+      - "OpenShift Logging is not configured."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

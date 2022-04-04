@@ -1,0 +1,34 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Persistent storage for Elasticsearch is appropriate"
+  references:  # List of Reference
+    - title: "Configuring persistent storage for the log store"
+      url: "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/logging/configuring-your-logging-deployment#cluster-logging-elasticsearch-storage_cluster-logging-store"
+  check_procedures:
+    - type: survey
+      question: "Log store is saved to persistent volumes"
+    - type: survey
+      question: "Log store is not on NFS"
+    - type: survey
+      question: "Is Elasticsearch using local raw block volumes? If you use a local volume for persistent storage, do not use a raw block volume, which is described with volumeMode: block in the LocalVolume object."
+    - type: survey
+      question: "Is the persistent volume backed by SSD / NVMe devices?"
+  acceptance_criteria:
+    no_change:
+      - id: 'Persistent storage configured for Elasticsearch is the appropriate type and speed'
+        condition_description: 'Elasticsearch has the appropriate type and speed of underlying storage to perform as expected under the current load'
+    changes_recommended:
+      - id: 'OpenShift logging storage is not non-optimal'
+        condition_description: "The underlying storage provided to OpenShift Logging's Elasticsearch deployment is non-optimal and will result in poor performance and/or unreliability"
+        impact_risk_text: "Elasticsearch requires persistent storage. The faster the storage, the faster the Elasticsearch performance. SSD/NVMe level performance is required to handle the high IOPS logging needs. Certain types of storage such as NFS or local raw block volumes can result in unreliability and corruption to data."
+        remediation_text: "Configure Elasticsearch persistent storage with SSD/NVMe backed storage"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

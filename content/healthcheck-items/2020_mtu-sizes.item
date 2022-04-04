@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Cluster Network MTU Size"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "The MTU settings for the OpenShift SDN is equal or lower than the MTU of the physical network."
+    changes_required:
+      - "The MTU settings for the OpenShift SDN is greater than the MTU of the physical network. Severe fragmentation and performance degradation will occur. Customer should adjust the settings equal or lower to the MTU of physical network."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

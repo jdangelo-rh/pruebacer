@@ -1,0 +1,24 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Load Balancer VIPs Consistently Configured"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "VIPs are configured for API, MachineConfig, Routers."
+    changes_required:
+      - "At least one VIP is not configured among API, MachineConfig, Routers URL. Each URL should point to a configured VIP."
+    not_applicable:
+      - "Infrastructure provider is not vSphere, baremetal (or agnostic installation), IBM Z (LinuxONE)."
+      - "Platform installation method is IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

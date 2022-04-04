@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "EmptyDir Volumes in use"
+  references:
+    - title: "Understanding ephemeral storage"
+      url: "https://docs.openshift.com/container-platform/4.8/storage/understanding-ephemeral-storage.html"
+    - title: "Understanding ephemeral storage"
+      url: "https://docs.openshift.com/container-platform/4.8/storage/understanding-ephemeral-storage.html"
+  acceptance_criteria:
+    no_change:
+      - "EmptyDir volumes are not used."
+    changes_recommended:
+      - "At least one workload use EmptyDir volume."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

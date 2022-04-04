@@ -1,0 +1,16 @@
+---
+version: v1
+metadata:
+  category_key: "vmware"
+  item_evaluated: "Check to see if the OpenShift Cluster is configured to use VMware Datastorage"
+  check_procedures:
+    - type: survey
+      question: "What datastore is OpenShift using for node storage as well as persistent storage "
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  ""  # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

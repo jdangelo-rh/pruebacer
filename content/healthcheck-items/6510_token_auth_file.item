@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Token-based Authentication is disabled"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Token-based Authentication is disabled"
+    changes_recommended:
+      - "The token-based authentication utilizes static tokens to authenticate requests to the API Server. The tokens are stored in clear-text in a file on the API Server, and cannot be revoked or rotated without restarting the API Server."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

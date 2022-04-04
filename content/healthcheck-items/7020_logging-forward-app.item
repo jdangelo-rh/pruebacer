@@ -1,0 +1,30 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Forward OpenShift application logs to external logging system"
+  references:  # List of Reference
+    - title: "Forwarding logs to external third-party logging systems"
+      url: "https://docs.openshift.com/container-platform/4.9/logging/cluster-logging-external.html"
+  check_procedures:
+    - type: survey
+      question: "Does the organization require that application logs are sent to a logging system external to OpenShift?"
+    - type: survey
+      question: "Are audit logs being forwarded to an external logging system?"
+  acceptance_criteria:
+    no_change:
+      - id: 'OpenShift application logs are forwarded to external logging system'
+        condition_description: 'Log forwarding configured for the OpenShift application pipeline to an external logging system'
+    changes_recommended:
+      - id: 'OpenShift application logs are not forwarded to an external logging system'
+        condition_description: "Log forwarding is not configured for the OpenShift application pipeline to an external logging system"
+        impact_risk_text: "An external logging system protects the confidentiality, integrity, and availability of application logs"
+        remediation_text: "Configure external log forwarding for application logs"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

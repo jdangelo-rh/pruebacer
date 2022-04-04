@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "etcd backup defined"
+  references:
+    - title: "Backing up etcd"
+      url: "https://docs.openshift.com/container-platform/4.8/backup_and_restore/backing-up-etcd.html"
+  acceptance_criteria:
+    no_change:
+      - "ETCD data are backed up"
+    changes_required:
+      - "ETCD data back up should be set on a regular interval."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

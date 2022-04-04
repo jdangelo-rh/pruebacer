@@ -1,0 +1,40 @@
+////
+Purpose
+-------
+Describe the architecture of the deployed and affected systems.
+
+Instructions
+------------
+The high level sections included here are intended to be relevant to ANY and ALL engagements.
+Before you remove a section thinking it is not relevant to your engagement, really think on
+whether it isn't relevant, or just hasn't been captured yet.
+
+For example, rather then removing the HA or DR section for a solution that did not have any
+HA or DR considerations takin into account, list that there was no HA or DR solution put in place
+and reference the Decision record that indicates why that is a case and/or that it was simply
+out of scope for the current engagement in which case then link to a future recommendation to
+introduce solutions for those problems later.
+////
+
+This content describes the architecture of the deployed and affected systems during this engagement.
+
+:context: architecture
+include::architecture/diagrams.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/processes.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/environment-setup.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/qos.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/service-levels.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/observability.adoc[leveloffset=+0]
+
+:context: architecture
+include::architecture/architectural-records.adoc[leveloffset=+0]

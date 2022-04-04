@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "infra"
+  item_evaluated: "OpenShift Node CPU/Memeory/Storage"
+  references:  # List of Reference
+    - title: "Minimum Resource requirements for Cluster Operation"
+      url: "URL of reference"
+  check_procedures:
+    - type: survey
+      question: "How much CPU, Memory, and Local Storage are assigned to each node?"
+  acceptance_criteria:
+    no_change:
+      - id: 'nochange_01'
+        condition_description: 'All nodes meet the minimum requirements and are currently allocated to an amount appropriate to handle the workloads deployed to the cluster'
+    changes_recommended:
+      - id: 'recommend01'
+        condition_description: "One or more nodes do not meet the required amount of CPU, Memory, and/or Local storage requirements."
+        impact_risk_text: "Not providing the cluster nodes with the appropriate amount of resources could lead to performance issues. "
+        remediation_text: "Increase/Decrease CPU, Memory, and local storage to "TBD"."
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

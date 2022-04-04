@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "infra"
+  item_evaluated: "If UPI what kind of OpenShift Provisioning Automation exists"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Provisionning automation exists."
+    changes_recommended:
+      - "Provisionning automation does not exist. We strongly encourage customer to automate Openshift provisioning for better operations."
+    not_applicable:
+      - "Platform installation method is IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Control Nodes Schedulable"
+  references:
+  - title: "How to make masters/control-plane schedulable during cluster installation in OCP 4"
+    url: "https://access.redhat.com/solutions/4685721"
+  acceptance_criteria:
+    no_change:
+    - "Masters nodes are not schedulable."
+    - "Masters nodes are schedulable and cluster is a 3-nodes configuration in bare-metal platform."
+    changes_required:
+    - "Masters nodes are schedulable and cluster is not a 3-nodes configuration in bare-metal platform. Master must be configured as not schedulable."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+
+

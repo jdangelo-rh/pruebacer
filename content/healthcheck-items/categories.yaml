@@ -1,0 +1,37 @@
+# Categories will be listed in the
+# report based of their order in this
+# file.
+#
+# If a category has no item files associated with it,
+# then it will be skipped completely.
+categories:
+  infra:
+    text: "Infrastructure"
+    short_text: "Infra"
+  vsphere:
+    text: "vSphere"
+    short_text: "vSphere"
+  aws:
+    text: "Amazon Web Services"
+    short_text: "AWS"
+  azure:
+    text: "Azure"
+    short_text: "Azure"
+  network:
+    text: "Network"
+    short_text: 'Network'
+  storage:
+    text: "Storage"
+    short_text: "Storage"
+  ocp_config:
+    text: "OpenShift Cluster Config"
+    short_text: "Cluster Config"
+  appdev:
+    text: "Application Development"
+    short_text: 'App Dev'
+  security:
+    text: "Security"
+    short_text: "Security"
+  operation_ready:
+    text: "Operational Readiness"
+    short_text: "Op-Ready"

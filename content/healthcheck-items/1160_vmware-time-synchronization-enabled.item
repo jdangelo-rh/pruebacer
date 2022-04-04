@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  category: "vSphere"
+  category_short: "vSphere"
+  item_evaluated: "VMware Time Synchronization Enabled"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "ESXi hosts time synchronization is enabled."
+    changes_required:
+      - "ESXi hosts time synchronization is disabled. Customer should take actions to enable synchronization in order to avoid etcd synchronization issue."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

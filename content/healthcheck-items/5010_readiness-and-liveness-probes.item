@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Readiness and Liveness Probes"
+  references:
+    - title: "Monitoring application health by using health checks"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/application-health.html"
+  acceptance_criteria:
+    no_change:
+      - "Both readiness and liveness probes are use on user workloads."
+    changes_recommended:
+      - "At least one workload does not have both readiness and liveness probes set."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

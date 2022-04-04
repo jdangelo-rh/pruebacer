@@ -1,0 +1,22 @@
+---
+version: v0 
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Default Project Template Set"
+  references:
+  - title: "Configuring project creation"
+    url: https://docs.openshift.com/container-platform/4.8/applications/projects/configuring-project-creation.html
+  - title: "Resource Quotas Per Project"
+    url: https://docs.openshift.com/container-platform/4.8/applications/quotas/quotas-setting-per-project.html
+  acceptance_criteria:
+    no_change:
+    - "Default project template is set with default network policies and resources quota configured."
+    changes_recommended:
+    - "No default project template is set with default network policies and resources quota configured. No new project created from the web console or CLI will have the settings to secure network flows and resources utilizations."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

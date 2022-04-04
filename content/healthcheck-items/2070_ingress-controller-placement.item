@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  item_evaluated: "Ingress Controller Placement"
+  references:
+    - title: "asdf asdf asdf"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Ingress Controller replicas are placed on infrastructure nodes."
+    changes_recommended:
+      - "One or more Ingress Controller replicas are not placed on infrastructure nodes."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

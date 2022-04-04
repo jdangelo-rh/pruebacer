@@ -1,0 +1,17 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Identity Provider Type"
+  references:  
+    - title: "Understanding identity provider configuration"
+      url: "https://docs.openshift.com/container-platform/4.8/authentication/understanding-identity-provider.html"
+  acceptance_criteria:
+    not_applicable:
+    - "Informational purpose."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

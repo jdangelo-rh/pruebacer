@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Container Base Images"
+  references:
+    - title: "Base image options"
+      url: "https://docs.openshift.com/container-platform/4.8/architecture/understanding-development.html#base-image-options"
+    - title: "Introducing the Red Hat Universal Base Image"
+      url: "https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image"
+    - title: "Getting started with containers"
+      url: "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux_atomic_host/7/html-single/getting_started_with_containers/index#using_red_hat_base_container_images_standard_and_minimal"
+  acceptance_criteria:
+    not_applicable:
+    - "Informational purpose"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

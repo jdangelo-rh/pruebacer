@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  item_evaluated: "CNI Network Plugin"
+  results:
+    result_text: ""
+    recommendation: tbe
+    impact_risk_text: ""
+    remediation_text: ""
+    additional_comments_text: ""
+  acceptance_criteria:
+    no_change:
+      - "CNI Network Plugin is OpenShift SDN ovs-network-policy plugin and there is no immediate requirement to move to OVN Kubernetes plugin."
+      - "CNI Network Plugin is OVN Kubernetes because there is one or more requirement to use this CNI plugin."
+    changes_recommended:
+      - "CNI Network Plugin is OpenShift OVN Kubernetes plugin and there is no immediate requirement to move to OVN Kubernetes plugin. Customer is advised to use OpenShift SDN plugin in absence of OVN Kubernetes features need."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

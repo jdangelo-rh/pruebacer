@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Default Security Context Constraint Unchanged"
+  references:
+# MAY NEED TO FIND A BETTER SOURCE!
+  - title:  "Managing security context constraints"
+    url: "https://docs.openshift.com/container-platform/4.8/authentication/managing-security-context-constraints.html"
+  acceptance_criteria:
+    no_change:
+    - "Default configured SCC is restricted."
+    changes_required:
+    - "Default configured SCC is a different SCC than restricted. Customer should not change the default SCC assigned to system:authenticated metagroup and follow OpenShift documentation for recommended practice when elevated permissions are required."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+
+

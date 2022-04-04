@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Limit-Request Configured"
+  references:
+    - title: "Automatically adjust pod resource levels with the vertical pod autoscaler"
+      url: "https://docs.openshift.com/container-platform/4.8/nodes/pods/nodes-pods-vertical-autoscaler.html"
+  acceptance_criteria:
+    no_change:
+      - "All user workloads have both limit and request configured in their pod description."
+    changes_recommended:
+      - "At least one user workload does not have both limit and request configured in its pod description."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

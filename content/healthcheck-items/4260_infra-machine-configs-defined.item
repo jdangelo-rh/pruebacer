@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Infra machine config pool defined"
+  references:
+    - title: "Creating a machine config pool for infrastructure machines"
+      url: "https://docs.openshift.com/container-platform/4.9/machine_management/creating-infrastructure-machinesets.html#creating-infra-machines_creating-infrastructure-machinesets"
+  acceptance_criteria:
+    no_change:
+      - "Infra machine config pool is defined."
+    changes_recommended:
+      - "No infra machine config pool is defined."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

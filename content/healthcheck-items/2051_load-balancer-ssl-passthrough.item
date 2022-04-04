@@ -1,0 +1,24 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Load Balancer SSL Settings"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Load Balancer SSL is configured in passthrough mode (TCP Layer 4) for API, MachineConfig and router endpoints."
+    changes_required:
+      - "At least one Load Balancer endpoint (API, MachineConfig, Router) is not configured in passthrough mode (TCP Layer 4)."
+    not_applicable:
+      - "Infrastructure provider is not vSphere, baremetal (or agnostic installation), IBM Z (LinuxONE), VMC."
+      - "Platform installation method is IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

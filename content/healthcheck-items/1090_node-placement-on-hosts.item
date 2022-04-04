@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  item_evaluated: "Node Placement on Hosts"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Master, infra, compute nodes are equally distributed on different ESXi hosts accross failure domains."
+    changes_recommended:
+      - "Master nodes are on the same ESXi hosts or on different ESXi hosts not distributed accross failure domains." 
+      - "Infra nodes are on the same ESXi hosts or on different ESXi hosts not distributed accross failure domains." 
+      - "Compute nodes are on the same ESXi hosts or are on different ESXi hosts not distributed accross failure domains."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Alternative Log Aggregation"
+  references:
+    - title: "Forwarding logs to external third-party logging systems"
+      url: "https://docs.openshift.com/container-platform/4.8/logging/cluster-logging-external.html"
+  acceptance_criteria:
+    no_change:
+      - "An alternative log aggregation is already configured for long term audit."
+    changes_recommended:
+      - "There is no alternative log aggregation configured for long term audit."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

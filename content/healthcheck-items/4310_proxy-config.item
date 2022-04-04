@@ -1,0 +1,30 @@
+---
+version: v1
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Openshift Proxy Settings"
+  references:  # List of Reference
+    - title: "Creating cluster-wide proxy"
+      url: "https://docs.openshift.com/container-platform/4.9/networking/enable-cluster-wide-proxy.html"
+    - title: "Configuring proxy override for Operators"
+      url: "https://docs.openshift.com/container-platform/4.9/operators/admin/olm-configuring-proxy-support.html"
+  check_procedures:
+    - type: survey
+      question: "Use the following command to verify customers cluster proxy: oc describe proxy/cluster"
+  acceptance_criteria:
+    no_change:
+      - id: 'Proxy is configured to the customers specification'
+        condition_description: 'Proxy has been configured and the endpoints are what the customer expects them to be.'
+    changes_recommended:
+      - id: 'Proxy configuration has not been setup or has the wrong endpoints'
+        condition_description: "The customer has not setup their proxy correctly."
+        impact_risk_text: "Customer may experience issues pulling images and pulling from SCM in their organization if proxying is not setup correctly."
+        remediation_text: "Work with customer to get proxy information and implement using the documentation linked."
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Configure the kubelet Certificate File for the API Server"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "The kubelet Certificate File for the API Server is configured"
+    changes_recommended:
+      - "The kubelet Certificate File must be configured. Configuring certificate-based kubelet authentication ensures that the API Server authenticates itself to kubelets when submitting requests."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,36 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the etcd data directory permissions are set to 700 or more restrictive"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "ETCD data directory has the right permissions"
+    changes_recommended:
+      - "Set ETCD data directory permissions to 700 or more"
+    how_to_check: |
+      count=0
+      outcome=0
+
+      for i in $(oc get pods -n openshift-etcd -l app=etcd -oname)
+        do 
+          count="$(oc exec -n openshift-etcd -c etcd $i -- stat -c %a:%n /var/lib/etcd/member | grep -o -i 700 | wc -l)"
+          outcome="$((outcome + count))"
+      done
+      if [ $outcome -eq 3 ]
+      then
+        echo "Ensure that the etcd data directory permissions are set to 700 or more restrictive","Pass"
+      else
+        echo "Ensure that the etcd data directory permissions are set to 700 or more restrictive","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: |
+     oc get pods -n openshift-etcd -l app=etcd -oname
+     oc exec -n openshift-etcd -c etcd $etcd-pod chmod 700 
+  additional_comments_text: ""

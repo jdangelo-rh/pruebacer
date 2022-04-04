@@ -1,0 +1,36 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the --client-ca-file argument is set as appropriate"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "The --client-ca-file argument is set as appropriate"
+    changes_recommended:
+      - "The --client-ca-file argument should be set as appropriate"
+    how_to_check: |
+      count=0
+      outcome=0
+      COUNTER=0
+      for node in $(oc get nodes -o jsonpath='{.items[*].metadata.name}')
+        do
+          count="$(oc debug node/${node} -- chroot /host grep clientCAFile: /etc/kubernetes/kubelet.conf | grep -o -i "clientCAFile: /etc/kubernetes/kubelet-ca.crt" | wc -l)"
+          outcome="$((outcome + count))"
+          COUNTER=$((COUNTER + 1))
+      done
+
+      if [ $outcome -eq $COUNTER ]
+      then
+        echo "Ensure that the --client-ca-file argument is set as appropriate","Pass"
+      else
+        echo "Ensure that the --client-ca-file argument is set as appropriate","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,35 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the --client-cert-auth argument is set to true"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "--client-cert-auth argument is set to true"
+    changes_recommended:
+      - "Set --client-cert-auth argument to true"
+    how_to_check: |
+      count=0
+      outcome=0
+
+      for i in $(oc get pods -oname -n openshift-etcd -l app=etcd)
+        do
+          count="$(oc exec -n openshift-etcd -c etcd $i -- ps -o command= -C etcd | sed 's/.*\(--client-cert-auth=[^ ]*\).*/\1/' | grep -o -i true | wc -l)"
+          outcome="$((outcome + count))"
+      done
+
+      if [ $outcome -eq 3 ] 
+      then
+        echo "Ensure that the --client-cert-auth argument is set to true","Pass"
+      else
+        echo "Ensure that the --client-cert-auth argument is set to true","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

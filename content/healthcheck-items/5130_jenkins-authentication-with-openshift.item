@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Jenkins Authentication with OpenShift"
+  references:
+    - title: "Version control system in use"
+      url: "http://docs.openshift.com/"
+  acceptance_criteria:
+    no_change:
+      - "Authentication with OpenShift from Jenkins agents is made through the Jenkins Client Plugin"
+    changes_recommended:
+      - "oc login command is used for authentication. Investigate the use of the Jenkins Client Plugin for authenticating with OpenShift"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,24 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  category: "vSphere"
+  category_short: "vSphere"
+  item_evaluated: "Datastore Multitenancy"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Each OCP cluster has its own vSphere datastore for persistent storage"
+    changes_recommended:
+      - "Two or more OCP clusters share the same datastore for persistent storage. Customer should consider to configure a separated datastore for each cluster to avoid operational issues if a datastore is full."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+      - "Platform installation method is UPI and cloud provider integration is not configured"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

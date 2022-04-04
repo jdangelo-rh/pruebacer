@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Deployment IaC Items Versioned"
+  references:
+    - title: "Understanding OpenShift GitOps"
+      url: "https://docs.openshift.com/container-platform/4.8/cicd/gitops/understanding-openshift-gitops.html"
+  acceptance_criteria:
+    no_change:
+      - "User workload YAML resources are version controlled."
+    changes_recommended:
+      - "User workload YAML resources are not version controlled."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

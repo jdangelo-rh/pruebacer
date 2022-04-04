@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Pod Creation Method"
+  references:
+    - title: "Understanding Deployment and DeploymentConfig objects"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/deployments/what-deployments-are.html"
+  acceptance_criteria:
+    no_change:
+      - "Pods are created through Deployment, DeploymentConfig or StatefulSets YAML resources."
+    changes_recommended:
+      - "Pods are created through Pod YAML resource directly."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

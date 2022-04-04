@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "security"
+  item_evaluated: "CI/CD integration with Security Scanning"
+  references:  # List of Reference
+    - title: "Utilize the Openshift container security guide to for some inspiration on effective scanning"
+      url: "https://docs.openshift.com/container-platform/4.9/security/container_security/security-understanding.html"
+  check_procedures:
+    - type: survey
+      question: "Ask customer what their solution will be for integrating a scanning solution into their pipelines to ensure images are properly vetted before deployment. Ask customer if their solution will involve modify or deploying additional software against the Openshift platform and how they will support this."
+  acceptance_criteria:
+    no_change:
+      - id: 'Security Scanning properly integrated into CI/CD platform'
+        condition_description: 'Customer has a properly vetted solutions which is compatible with the Openshift platform, supportable and meets their security needs'
+    changes_recommended:
+      - id: 'Customer has not implemented a solution or a solution is not viable for Openshift'
+        condition_description: "The customer has not decided yet on a scanning solution for their pipelines. The scanning solution they want requires additional software which may not be installable on Openshift"
+        impact_risk_text: "Customer will not be able to properly vet their images and could lead to security concerns"
+        remediation_text: "Work with customer to identify a scanning method which will meet their needs and is Openshift supported if necessary."
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

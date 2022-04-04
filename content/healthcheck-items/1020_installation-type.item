@@ -1,0 +1,24 @@
+---
+version: v0
+metadata:
+  category_key: "infra"
+  item_evaluated: "Installation Type"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "IPI Installation on IPI-supported infrastructure provider"
+      - "UPI Installation on supported platform where IPI not supported"
+      - "UPI Installation on Red Hat untested platform following Red Hat agnostic installation guidelines."
+    changes_recommended:
+      - "UPI Installation on platform where IPI is supported"
+    changes_required:
+      - "Installation on Red Hat untested infrastructure provider NOT following Red Hat agnostic installation guidelines."
+      - "IPI Installation on unsupported IPI platform."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

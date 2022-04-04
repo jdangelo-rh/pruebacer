@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Adequate Measures in place to keep customer workloads off Infra Nodes"
+  references:
+  - title: "Infrastructure Nodes in OpenShift 4"
+    url: https://access.redhat.com/solutions/5034771
+  acceptance_criteria:
+    no_change:
+    - "Configuration is done to exclude application workloads from being scheduled on Infrastructure Nodes."
+    changes_required:
+    - "No configuration or incomplete configuration is done to exclude application workloads from being scheduled in Infrastructure Nodes. This could lead to breach to subscription contract."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+
+

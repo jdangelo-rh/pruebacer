@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Default Node Selector Set"
+  references:
+  - title: "Placing pods on specific nodes using node selectors"
+    url: https://docs.openshift.com/container-platform/4.8/nodes/scheduling/nodes-scheduler-node-selectors.html
+# NEED A SOURCE ON WHY THIS IS BAD!
+  acceptance_criteria:
+    no_change:
+    - "Default Node Selector is not set."
+    changes_required:
+    - "Default Node Selector is set. Creating default cluster-wide Node Selectors can cause issues with scheduling (notably with DaemonSets) and are recommended to be avoided."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+ 

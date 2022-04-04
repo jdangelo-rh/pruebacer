@@ -1,0 +1,25 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "User Workload Monitoring"
+  references:
+    - title: "Understanding the monitoring stack"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/understanding-the-monitoring-stack.html"
+    - title: "Configuring the monitoring stack"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/configuring-the-monitoring-stack.html"
+    - title: "Enabling monitoring for user-defined projects"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/enabling-monitoring-for-user-defined-projects.html"
+  acceptance_criteria:
+    no_change:
+      - "User workload monitoring is configured and enabled on all user-defined projects."
+    changes_recommended:
+      - "User workload monitoring is not configured."
+      - "User workload monitoring is not enabled on at least one user-defined project."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

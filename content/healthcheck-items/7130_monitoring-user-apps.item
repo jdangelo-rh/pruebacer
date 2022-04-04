@@ -1,0 +1,34 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Application specific metrics are monitored on OpenShift"
+  references:  # List of Reference
+    - title: "Configure metrics collection for applications deployed on OCP using metrics collection for user defined projects"
+      url: "https://docs.openshift.com/container-platform/4.9/monitoring/managing-metrics.html#setting-up-metrics-collection-for-user-defined-projects_managing-metrics"
+    - title: "Monitor applications deployed to OpenShift using 3rd party tools such as Dynatrace"
+      url: "https://www.dynatrace.com/technologies/openshift-monitoring/"
+    - title: "Monitor applications deployed to OpenShift using 3rd party tools such as AppDynamics"
+      url: "https://www.appdynamics.com/solutions/openshift"
+    - title: "Monitor applications deployed to OpenShift using 3rd party tools such as NewRelic"
+      url: "https://newrelic.com/blog/how-to-relic/red-hat-openshift-monitor"
+  check_procedures:
+    - type: survey
+      question: "Does the organization monitor application specific metrics to ensure they are functioning and performing as expected?"
+  acceptance_criteria:
+    no_change:
+      - id: 'Application specific monitoring tools are in place and being utilized'
+        condition_description: 'Sufficient tooling and processes are in place to ensure that applications deployed to OpenShift are performing as expected'
+    changes_recommended:
+      - id: 'Application specific monitoring tools are not in place or being utilized'
+        condition_description: "Insufficient tooling and processes are in place to ensure that applications deployed to OpenShift are performing as expected"
+        impact_risk_text: "OpenShift can monitor that application pods are started, and pass basic checks. Additional consideration should be given to capturing application specific metrics to identify performance and reliability issues for applications deployed to OCP."
+        remediation_text: "Deploy and configure application specific metrics tools"
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: ""
+  remediation_additional_text: ""
+  additional_comments_text: ""

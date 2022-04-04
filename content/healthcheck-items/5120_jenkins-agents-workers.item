@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Jenkins Agents Workers"
+  references:
+    - title: "Jenkins agent"
+      url: "https://docs.openshift.com/container-platform/4.8/openshift_images/using_images/images-other-jenkins-agent.html"
+  acceptance_criteria:
+    no_change:
+      - "Jenkins workers are running in-cluster as containers"
+    changes_recommended:
+      - "Jenkins workers are running in VMs"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

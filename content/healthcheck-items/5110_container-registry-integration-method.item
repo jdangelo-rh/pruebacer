@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Container Registry Integration Method"
+  references:
+    - title: "Red Hat OpenShift Container Platform Life Cycle Policy"
+      url: "https://access.redhat.com/support/policy/updates/openshift"
+    - tite: "Skopeo"
+      url: "https://github.com/containers/skopeo"
+  acceptance_criteria:
+    advisory: 
+    - "Evaluate Skopeo as a tool for image copying. Skopeo is run-time independent and can be run without root privileges."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  item_evaluated: "VMware vSphere Version"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Version is 6.7U3+ or 7.x."
+    changes_recommended:
+      - "Version is 6.5 with hardware version 13. Customer should consider to upgrade to 6.7U3+ or 7.0x."
+    changes_required:
+      - "Version is below 6.5 with hardware version 13. Customer must upgrade vSphere to 6.5 with hardware version 13 at least."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

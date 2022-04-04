@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "etcd Encryption Enabled"
+  references:
+    - title: "Encrypting etcd data"
+      url: "https://docs.openshift.com/container-platform/4.8/security/encrypting-etcd.html"
+  acceptance_criteria:
+    no_change:
+      - "ETCD data encryption is enabled."
+    changes_recommended:
+      - "ETCD data encryption is disabled."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

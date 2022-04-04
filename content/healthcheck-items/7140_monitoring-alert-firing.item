@@ -1,0 +1,28 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Ensure all OpenShift alerts are reviewed, addressed or silenced"
+  references:  # List of Reference
+    - title: "Managing alerts"
+      url: "https://docs.openshift.com/container-platform/4.8/monitoring/managing-alerts.html"
+  check_procedures:
+    - type: survey
+      question: "Besides the watchdog alert, are any other alerts firing that can't be resolved or silenced?"
+  acceptance_criteria:
+    no_change:
+      - id: 'All OpenShift alerts have been addressed'
+        condition_description: 'OpenShift alerts provide information to administrators about the status of the cluster. All alerts have been properly addressed.'
+    changes_recommended:
+      - id: 'OpenShift alerts are firing that have not been addressed'
+        condition_description: "OpenShift alerts provide information to administrators about the status of the cluster. Alerts are firing that have not been properly addressed."
+        impact_risk_text: "Alerts that are firing can indicate imminent failure or just provide information based on the severity of the alert. Critical alerts should be immediately addressed and resolved to prevent platform outages or degraded performance. Other alerts such as 'INFO' may just need to be silenced once acknowledged"
+        remediation_text: "Review all alerts and remediate or silence as needed"
+results:
+  result_short_text: "short text"  # Short description of results
+  result_long_text:  "this is a longer text" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

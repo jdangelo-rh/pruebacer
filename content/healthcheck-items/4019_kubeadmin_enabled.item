@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "kubeadmin user disabled"
+  references:  
+    - title: "Removing the kubeadmin user"
+      url: "https://docs.openshift.com/container-platform/4.8/authentication/remove-kubeadmin.html"
+  acceptance_criteria:
+    no_change:
+    - "kubeadmin user is disabled."
+    changes_required:
+    - "kubeadmin user is enabled. This user is for temporary post installation steps and should be removed to avoid any potential security breach"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

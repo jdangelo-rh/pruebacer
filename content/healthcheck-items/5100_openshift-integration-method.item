@@ -1,0 +1,17 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "OpenShift Integration Method"
+  references:
+    - title: "Integration with OpenShift from Jenkins CI/CD workflow"
+      url: "https://github.com/openshift/jenkins-client-plugin"
+  acceptance_criteria:
+    advisory:
+      - "Evaluate the use of OpenShift Jenkins Client Plugin for integration with OpenShift from Jenkins agent flows"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

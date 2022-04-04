@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "infra"
+  item_evaluated: "Infrastructure Provider"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Infrastructure provider is a Red Hat tested infrastructure provider: Bare-metal, vSphere, RHOSP, AWS, GCP, Azure, IBM Z or LinuxONE, IBM Power Systems, RHV."
+    changes_recommended:
+      - "Infrastructure provider is a non tested infrastructure provider. Moving to a Red Hat tested infrastructure provider is recommended."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

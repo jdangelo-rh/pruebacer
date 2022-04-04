@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "basic-auth-file for the API Server is disabled"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "basic-auth-file for the API Server is disabled"
+    changes_recommended:
+      - "Basic Authentication should not be used for any reason. The Basic Authentication is currently supported for convenience and is not intended for production workloads."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

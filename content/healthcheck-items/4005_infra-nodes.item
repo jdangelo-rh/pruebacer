@@ -1,0 +1,21 @@
+---
+version: v0 
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Infrastructure Nodes present"
+  references:
+  - title: "Infrastructure Nodes in OpenShift 4"
+    url: https://access.redhat.com/solutions/5034771
+  acceptance_criteria:
+    no_change:
+    - "Cluster has 3 or more Infrastructure Nodes."
+    changes_recommended:
+    - "Customer has fewer than 3 Infrastructure Nodes.  Customer should configure at least 3 Infrastructure Nodes for non-application workloads."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+
+  

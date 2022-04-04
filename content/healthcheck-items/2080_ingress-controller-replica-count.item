@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  item_evaluated: "Ingress Controller Replica Count"
+  references:
+    - title: "asdf asdf asdf"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Ingress Controller replica Count is 3 or more."
+    changes_recommended:
+      - "Ingress Controller replica Count is 2. Scale at least 3 replicas on infra nodes to spread equally the load."
+    changes_required:
+      - "Ingress Controller replica Count is one. Scale at least 2 replicas to get high availability."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

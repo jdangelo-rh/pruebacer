@@ -1,0 +1,41 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the --cert-file and --key-file arguments are set as appropriate"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "--cert-file and --key-file arguments are set as appropriate"
+    changes_recommended:
+      - "--cert-file and --key-file arguments should be set as appropriate"
+    how_to_check: |
+      outcomecert=0
+      outcomekey=0
+
+      for i in $(oc get pods -o name -n openshift-etcd)
+        do
+          count="$(oc exec -n openshift-etcd -c etcd $i -- ps -o command= -C etcd | sed 's/.*\(--cert-file=[^ ]*\).*/\1/' | grep -o -i cert-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-serving/etcd-serving-.*.crt | wc -l)"
+          outcomecert="$((outcomecert + count))"
+      done
+
+      for i in $(oc get pods -o name -n openshift-etcd)
+        do
+          countkey="$(oc exec -n openshift-etcd -c etcd $i -- ps -o command= -C etcd | sed 's/.*\(--key-file=[^ ]*\).*/\1/' | grep -o -i key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-serving/etcd-serving-.*.key | wc -l)"
+          outcomekey="$((outcomekey + countkey))"
+      done
+
+      if [ $outcomecert -eq 3 ] && [ $outcomekey -eq 3 ]
+      then
+        echo "Ensure that the --cert-file and --key-file arguments are set as appropriate","Pass"
+      else
+        echo "Ensure that the --cert-file and --key-file arguments are set as appropriate","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

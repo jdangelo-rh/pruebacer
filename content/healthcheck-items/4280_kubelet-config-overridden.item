@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Kubelet Configuration Overridden"
+  references:
+    - title: "Managing nodes"
+      url: "https://docs.openshift.com/container-platform/4.8/nodes/nodes/nodes-nodes-managing.html"
+    - title: "Freeing node resources using garbage collection"
+      url: "https://docs.openshift.com/container-platform/4.8/nodes/nodes/nodes-nodes-garbage-collection.html"
+  acceptance_criteria:
+    no_change:
+      - "Kubelet configuration is enabled to provide garbage collection."
+    changes_recommended:
+      - "Kubelet configuration is not enabled to provide garbage collection."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

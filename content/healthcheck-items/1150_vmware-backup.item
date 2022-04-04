@@ -1,0 +1,23 @@
+---
+version: v0
+metadata:
+  category_key: "vsphere"
+  category: "vSphere"
+  category_short: "vSphere"
+  item_evaluated: "VM Backup"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "VM are not backed up."
+    changes_recommended:
+      - "VM are backed up. There is no VM backup/snapshot mechanism supported for OpenShift. Customer should focus on datastore volumes backup and ETCD backup."
+    not_applicable:
+      - "Infrastructure provider is not vSphere."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

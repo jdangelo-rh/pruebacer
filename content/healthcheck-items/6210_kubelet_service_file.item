@@ -1,0 +1,37 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the kubelet service file permissions are set to 644 or more restrictive"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Tkubelet service file permissions are set to 644 or more restrictive"
+    changes_recommended:
+      - "Set kubelet service file permissions to 644 or more restrictive"
+    how_to_check: |
+      count=0
+      outcome=0
+      COUNTER=0
+
+      for node in $(oc get nodes -o jsonpath='{.items[*].metadata.name}')
+        do
+          count="$(oc debug node/${node} -- chroot /host stat -c %a:%n /etc/systemd/system/kubelet.service | grep -o -i 644 | wc -l)"
+          outcome="$((outcome + count))"
+          COUNTER=$((COUNTER + 1))
+      done
+
+      if [ $outcome -eq $COUNTER ]
+      then
+        echo "Ensure that the kubelet service file permissions are set to 644 or more restrictive","Pass"
+      else
+        echo "Ensure that the kubelet service file permissions are set to 644 or more restrictive","Fail"
+      fi
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

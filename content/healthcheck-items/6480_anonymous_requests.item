@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that anonymous requests to the API Server are authorized"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "Anonymous requests to the API Server are authorized"
+    changes_recommended:
+      - "Make sure that there exists at least one clusterrolebinding that binds either the system:unauthenticated group or the system:anonymous user."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,44 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "OpenShift logging deployment is functioning and healthy"
+  references:  # List of Reference
+    - title: "OpenShift - Troubleshooting Logging"
+      url: "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/logging/troubleshooting-logging"
+  check_procedures:
+    - type: survey
+      question: "Is the logging operator reporting any issues?"
+  acceptance_criteria:
+    no_change:
+      - id: 'OpenShift infrastructure logs are forwarded to external logging system'
+        condition_description: 'Log forwarding configured for the OpenShift infrastructure pipeline to an external logging system'
+    changes_recommended:
+      - id: 'OpenShift infrastructure logs are not forwarded to an external logging system'
+        condition_description: "Log forwarding is not configured for the OpenShift infrastructure pipeline to an external logging system"
+        impact_risk_text: "An external logging system protects the confidentiality, integrity, and availability of infrastructure logs"
+        remediation_text: "Configure external log forwarding for infrastructure logs"
+    how_to_check: |
+      oc project openshift-logging
+      oc get clusterlogging instance -o yaml
+      echo 'Review the output under "status" for fluentd pods, logstore and visualization. Take node of any components in a not-ready status and details around the condition messages'
+
+      oc project openshift-logging
+      oc describe deployment cluster-logging-operator
+      oc get replicaset
+      echo 'Review the output of the operator and the associated replicaset for errors'
+
+      oc project openshift-logging
+      oc get pods --selector component=elasticsearch -o name
+      echo 'Take node of the pod names and use in the command below'
+      oc exec elasticsearch-cdm-4vjor49p-2-6d4d7db474-q2w7z -- indices
+      echo 'Ensure all indices are green'
+
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

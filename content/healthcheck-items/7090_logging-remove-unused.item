@@ -1,0 +1,36 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "Unneeded logging components removed to save resources"
+  references:  # List of Reference
+    - title: "Removing unused components if you do not use the default Elasticsearch log store"
+      url: "https://access.redhat.com/documentation/en-us/openshift_container_platform/4.8/html/logging/configuring-your-logging-deployment#cluster-logging-removing-unused-components-if-no-elasticsearch_cluster-logging-collector"
+  check_procedures:
+    - type: survey
+      question: "Are logs from OpenShift sent to an external logging system?"
+    - type: survey
+      question: "Is that external logging system the system of record and accessible by Operations, Developers and Security?"
+    - type: survey
+      question: "Is the internal OpenShift log store unnecessary for the organization?"
+  acceptance_criteria:
+    no_change:
+      - id: 'Logging components installed are appropriate based on need'
+        condition_description: 'Including the log storage and visualization components within OpenShift is a business decision based on the organizational priorities and workflow. If an external log store is the prefered method of viewing and searching logs, then the OpenShift logstore and visualization may be unnecessary and can consume significant resources. '
+    changes_recommended:
+      - id: 'Logging components are installed that are not being leveraged and can be removed'
+        condition_description: "Logging components installed do not match the organizational priorities. Including the log storage and visualization components within OpenShift is a business decision based on the organizational priorities and workflow. If an external log store is the prefered method of viewing and searching logs, then the OpenShift logstore and visualization may be unnecessary and can consume significant resources."
+        impact_risk_text: "OpenShifts internal logstore consumes significant resources in order to store and process all the audit, infrastructure and application logs. If components are installed that aren't being used increase the resources required to host the OpenShift cluster"
+        remediation_text: "Remove the logStore and visualization stanzas from the ClusterLogging instance. NOTE - Do not remove the collection stanza as that will remove the components necessary to forward logs to external logging systems"
+    how_to_check: |
+      oc edit ClusterLogging instance
+      echo 'Check if logStore and visualization stanzas are defined'
+
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

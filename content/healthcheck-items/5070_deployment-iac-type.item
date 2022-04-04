@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Deployment IaC Type"
+  references:
+    - title: "Working with Helm charts using the Developer perspective."
+      url: "https://docs.openshift.com/container-platform/4.8/applications/application_life_cycle_management/odc-working-with-helm-charts-using-developer-perspective.html"
+    - title: "Creating applications from installed Operators"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/application_life_cycle_management/creating-apps-from-installed-operators.html"
+  acceptance_criteria:
+    no_change:
+      - "Helm charts or Operators are used for deployment."
+    changes_recommended:
+      - "Neither Helm charts nor Operators are used for deployment."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

@@ -1,0 +1,25 @@
+---
+version: v1
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the healthz endpoint is protected by ActiveDirectory/LDAP"
+  references:
+    - title: "Setup Active Directory Authentication"
+      url: "https://examples.openshift.pub/cluster-configuration/authentication/activedirectory-ldap/"
+  check_procedures:
+    - type: survey
+      question: "Whether A/ldapD configured or not"
+      question: "Whether the connection to ladap is secure or not"
+      question: "Whether bind-password is protacted as secret or not"
+      question: "Whether bind domain name is a user account or service account"
+  acceptance_criteria:
+    no_change:
+      - id: 'healthz endpoint is protected by AD/LDAP'
+    changes_recommended:
+      - "healthz endpoint is protected by AD/LDAP"
+results:
+  result_short_text: ""
+  recommendation: tbe
+  remediation_additional_text: ""
+  additional_comments_text: "Additional comments from consultant"
+

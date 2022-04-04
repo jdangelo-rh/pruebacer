@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Disaster Recovery Deployments"
+  references:
+    - title: "Disaster Recovery Strategies for Applications Running on OpenShift"
+      url: "https://cloud.redhat.com/blog/disaster-recovery-strategies-for-applications-running-on-openshift"
+  acceptance_criteria:
+    no_change:
+      - "Applications are deployed across multiple clusters for high availability. DR scenarios are prepared and tested"
+    changes_recommended:
+      - "Consider deploying applications across multiple independent clusters for increased availability. Prepare and test DR scenarios"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

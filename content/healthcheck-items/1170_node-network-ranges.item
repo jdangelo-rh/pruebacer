@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Node Network Ranges"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Each OCP cluster has its own separated network ranges"
+    changes_recommended:
+      - "Two or more OCP clusters share the same network range. Customer should consider to segregate the clusters network as a best practise for security."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

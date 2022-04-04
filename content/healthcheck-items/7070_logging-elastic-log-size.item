@@ -1,0 +1,37 @@
+---
+version: v1
+metadata:
+  category_key: "operation_ready"
+  item_evaluated: "OpenShift Logging Elasticsearch storage has sufficient space"
+  references:  # List of Reference
+    - title: "todo"
+      url: "https://docs.openshift.com/container-platform/4.9/logging/cluster-logging-external.html"
+  check_procedures:
+    - type: survey
+      question: "Is the disk space utilization on the Elasticsearch pods sufficiently below the high watermark lines?"
+    - type: survey
+      question: "Is there sufficent free space to accomodate the expected growth of applications deployed or logs created in the cluster?"
+    - type: survey
+      question: "Does the current level of log retention meet the business requirements?"
+  acceptance_criteria:
+    no_change:
+      - id: 'OpenShift Elasticsearch pods have sufficient free disk space'
+        condition_description: 'The current level of free space on OpenShift Elasticsearch pods is sufficient for now and in the near future'
+    changes_recommended:
+      - id: 'OpenShift Elasticsearch pods do not have sufficient free disk space'
+        condition_description: "The current level of free space on OpenShift Elasticsearch pods is not sufficient for now or in the near future"
+        impact_risk_text: "When the disk space reaches 95% used Elasticsearch has a protective function that locks the indices stopping new data from being written to them. This is to stop Elasticsearch from using any further disk causing the disk to become exhausted."
+        remediation_text: "Expand the available storage available to Elasticsearch or reduce the log retention period"
+    how_to_check: |
+      echo 'From the OpenShift web console, select "Monitoring" and then "Dashboards"'
+      echo 'In the Dashboards pane, click the "Dashboard" drop down and select "Logging / Elasticsearch"'
+      echo 'Scroll down to the "System" section and review the "Disk space % used" graph'
+      echo 'Utilization for all the pods should be below the "Cluster Flood", "Cluster High Water" and "Cluster Low Water" marks'
+results:
+  result_short_text: ""  # Short description of results
+  result_long_text:  "" # Optional longer result description
+  recommendation: tbe
+  acceptance_criteria_id:  ''
+  impact_risk_additional_text: "Additional impact risk from consultant"
+  remediation_additional_text: "Additional remediation text from consultant"
+  additional_comments_text: "Additional comments from consultant"

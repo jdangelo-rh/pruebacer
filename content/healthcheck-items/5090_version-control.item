@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Version Control"
+  references:
+    - title: "Version control system in use"
+      url: "http://docs.openshift.com/"
+  acceptance_criteria:
+    no_change:
+      - "A central source control system in use and described"
+    changes_recommended:
+      - "No central source control system is in place"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

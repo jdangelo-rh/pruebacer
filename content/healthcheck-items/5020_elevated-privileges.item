@@ -1,0 +1,20 @@
+---
+version: v0
+metadata:
+  category_key: "appdev"
+  item_evaluated: "Elevated Privileges"
+  references:
+    - title: "Managing security context constraints"
+      url: "https://docs.openshift.com/container-platform/4.8/authentication/managing-security-context-constraints.html"
+  acceptance_criteria:
+    no_change:
+      - "By default all user workloads use restricted SCC and if it is not possible use the most restrictive appropriated SCC."
+    changes_recommended:
+      - "At least one user workload use an unjustified non restricted SCC."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

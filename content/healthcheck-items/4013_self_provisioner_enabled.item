@@ -1,0 +1,21 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Self Provisioner Enabled"
+  references:  
+    - title: "Disabling project self-provisioning"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/projects/configuring-project-creation.html#disabling-project-self-provisioning_configuring-project-creation"
+  acceptance_criteria:
+    no_change:
+    - "Self Provisioner is disabled."
+    changes_recommended:
+    - "Self Provisioner is enabled. Self Provisioner should be disabled to avoid uncontrolled namespace creation." 
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+
+

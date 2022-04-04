@@ -1,0 +1,26 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Load Balancer Health Checks Enabled"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Load Balancer health checks are enabled on API, MachineConfig, routers endpoints."
+    changes_recommended:
+      - "Load Balancer health checks is enabled on API but not on MachineConfig or routers endpoints. Health check should be enabled on MachineConfig and routers endpoints also."
+    changes_required:
+      - "At least load Balancer health check is not enabled on API URL. Health check must be enabled on API at least."
+    not_applicable:
+      - "Infrastructure provider is not vSphere, baremetal (or agnostic installation), IBM Z (LinuxONE)."
+      - "Platform installation method is IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

@@ -1,0 +1,22 @@
+---
+version: v0
+metadata:
+  category_key: "ocp_config"
+  item_evaluated: "Resource Quotas Defined"
+  references:
+    - title: "Resource quotas per project"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/quotas/quotas-setting-per-project.html"
+    - title: "Resource quotas across multiple projects"
+      url: "https://docs.openshift.com/container-platform/4.8/applications/quotas/quotas-setting-across-multiple-projects.html"
+  acceptance_criteria:
+    no_change:
+      - "Resource quotas are configured on all user-defined projects."
+    changes_recommended:
+      - "At least one project has no resource quota configured."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
+

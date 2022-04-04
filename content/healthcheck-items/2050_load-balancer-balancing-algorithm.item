@@ -1,0 +1,25 @@
+---
+version: v0
+metadata:
+  category_key: "network"
+  category: "Network"
+  category_short: "Network"
+  item_evaluated: "Load Balancer Balancing Algorithm"
+  references:
+    - title: "my title"
+      url: "https://docs.openshift.com"
+  acceptance_criteria:
+    no_change:
+      - "Stateless load balancing algorithm for API and MachineConfig endpoints ;  routers endpoints have the appropriate load balancing algorithm appropriate to applications hosted"
+    changes_recommended:
+      - "Load balancing algorithm for API and MachineConfig endpoints is NOT stateless)"
+      - "Routers endpoints does not have the appropriate load balancing algorithm for applications hosted in the platform."
+    not_applicable:
+      - "Infrastructure provider is not vSphere, baremetal (or agnostic installation), IBM Z (LinuxONE), VMC."
+      - "Platform installation method is IPI."
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""

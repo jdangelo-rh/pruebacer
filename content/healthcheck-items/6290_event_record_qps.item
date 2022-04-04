@@ -1,0 +1,19 @@
+---
+version: v0
+metadata:
+  category_key: "security"
+  item_evaluated: "Ensure that the eventRecordQPS option is set to 0 or a level which ensures appropriate event capture"
+  references:
+    - title: "Hardening Guide"
+      url: "https://access.redhat.com/solutions/5778951"
+  acceptance_criteria:
+    no_change:
+      - "the eventRecordQPS option is set to 0 or a level which ensures appropriate event capture"
+    changes_recommended:
+      - "Set the eventRecordQPS option to 0 or a level which ensures appropriate event capture"
+results:
+  result_text: ""
+  recommendation: tbe
+  impact_risk_text: ""
+  remediation_text: ""
+  additional_comments_text: ""
